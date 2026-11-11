@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080810">
+  <meta name="description" content="A student portfolio and creative music lounge.">
+  <title>Haykenn 🍄</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="loader" id="loader" aria-label="Loading">
+    <div class="loader-inner">
+      <div class="loader-logo" aria-hidden="true">🍄</div>
+      <div class="loader-line"></div>
+    </div>
+  </div>
+
+  <header class="nav">
+    <nav class="nav-inner wrap" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Haykenn mushroom home"><span class="brand-mark" aria-hidden="true"></span><span>Haykenn <span class="mushroom">🍄</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#music">Music</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="status glass"><span class="status-dot"></span> Available for new ideas</div>
+          <h1>Hi, I'm<br><span class="name gradient-text">Haykenn.</span></h1>
+          <div class="hero-meta"><span>⌁ Student</span><span>⌁ Creator</span></div>
+        </div>
+      </div>
+
+    <section class="section music-section" id="music">
+      <div class="wrap">
+        <div class="section-head music-section-head reveal"><h2>Welcome to my <span class="gradient-text">music room.</span></h2><p>A little soundtrack for late-night coding sessions and creative breaks.</p></div>
+        <div class="music-grid">
+          <div class="music-panel music-track-panel glass reveal">
+            <h3>Now playing <span class="gradient-text">✦</span></h3>
+            <div class="music-card-art" role="img" aria-label="Original animated flame artwork">
+              <div class="fire-banner-glow"></div>
+              <div class="fire-art" aria-hidden="true">
+                <span class="fire-wave"></span><span class="fire-wave"></span><span class="fire-wave"></span>
+                <span class="fire-wave"></span><span class="fire-wave"></span><span class="fire-wave"></span>
+                <span class="fire-wave"></span>
+              </div>
+              <span class="music-card-art-label">FLAME · RHYTHM · REPEAT</span>
+            </div>
+            <div class="music-track-controls">
+              <audio class="audio-player" controls autoplay preload="metadata">
+                <source src="audio/matikas.mp3" type="audio/mpeg">
+                Your browser does not support the audio player.
+              </audio>
+              <p class="music-note" id="audioStatus" aria-live="polite">Trying to start MATIKAS...</p>
+              <p class="music-note" id="currentTrackName">Gat Putch — MATIKAS (feat. Smugglaz, Icetizy & Uncle Dags)</p>
+            </div>
+          </div>
+          <div class="music-panel music-playlist-panel glass reveal">
+            <h3>Spotibaii playlist</h3>
+            <div class="spotify-display">
+              <div class="track-list" id="uncleDagsTracks" role="group" aria-label="Uncle Dags songs" aria-hidden="true" inert>
+                <button class="playlist-track is-active" type="button" data-track-src="audio/matikas.mp3" data-track-title="Gat Putch — MATIKAS (feat. Smugglaz, Icetizy & Uncle Dags)" aria-pressed="true">
+                  <span class="playlist-track-number">01</span>
+                  <span class="playlist-track-title">MATIKAS</span>
+                  <span class="playlist-track-artist">Gat Putch · Smugglaz · Icetizy · Uncle Dags</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/1990.mp3" data-track-title="Uncle Dags — 1990" aria-pressed="false">
+                  <span class="playlist-track-number">02</span>
+                  <span class="playlist-track-title">1990</span>
+                  <span class="playlist-track-artist">Uncle Dags</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/viva-la-raza.mp3" data-track-title="Uncle Dags — Viva La Raza (feat. THUGSTA)" aria-pressed="false">
+                  <span class="playlist-track-number">03</span>
+                  <span class="playlist-track-title">Viva La Raza</span>
+                  <span class="playlist-track-artist">Uncle Dags · THUGSTA</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/hasta-la-vista.mp3" data-track-title="Uncle Dags — Hasta La Vista (feat. J-HIGH, Big Lane)" aria-pressed="false">
+                  <span class="playlist-track-number">04</span>
+                  <span class="playlist-track-title">Hasta La Vista</span>
+                  <span class="playlist-track-artist">Uncle Dags · J-HIGH · Big Lane</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/tamaraw.mp3" data-track-title="Uncle Dags — Tamaraw (feat. KKRAM)" aria-pressed="false">
+                  <span class="playlist-track-number">05</span>
+                  <span class="playlist-track-title">Tamaraw</span>
+                  <span class="playlist-track-artist">Uncle Dags · KKRAM</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/dugkat.mp3" data-track-title="Uncle Dags — Dugkat (feat. Gat Putch)" aria-pressed="false">
+                  <span class="playlist-track-number">06</span>
+                  <span class="playlist-track-title">Dugkat</span>
+                  <span class="playlist-track-artist">Uncle Dags · Gat Putch</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/origimal.mp3" data-track-title="Uncle Dags — Origimal (feat. RJD)" aria-pressed="false">
+                  <span class="playlist-track-number">07</span>
+                  <span class="playlist-track-title">Origimal</span>
+                  <span class="playlist-track-artist">Uncle Dags · RJD</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/poksa.mp3" data-track-title="Uncle Dags — Poksa (feat. Yuridope)" aria-pressed="false">
+                  <span class="playlist-track-number">08</span>
+                  <span class="playlist-track-title">Poksa</span>
+                  <span class="playlist-track-artist">Uncle Dags · Yuridope</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/rastunna.mp3" data-track-title="RASTUNNA — Slick V, Buensa, Uncle Dags, Niño Armani, Cozy Wrld, Louie Grammz" aria-pressed="false">
+                  <span class="playlist-track-number">09</span>
+                  <span class="playlist-track-title">RASTUNNA</span>
+                  <span class="playlist-track-artist">Slick V · Buensa · Uncle Dags · Niño Armani · Cozy Wrld · Louie Grammz</span>
+                </button>
+              </div>
+              <div class="track-list waiian-track-list" id="waiianTracks" role="group" aria-label="Waiian songs" aria-hidden="true" inert>
+                <button class="playlist-track" type="button" data-track-src="audio/waiian-solo-mission.mp3" data-track-title="Waiian — Solo Mission (Prod. by Ruiijikun)" aria-pressed="false">
+                  <span class="playlist-track-number">01</span>
+                  <span class="playlist-track-title">Solo Mission</span>
+                  <span class="playlist-track-artist">Waiian · Prod. by Ruiijikun</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/waiian-12-am.mp3" data-track-title="Waiian — 12 AM (Prod. by Jwudz)" aria-pressed="false">
+                  <span class="playlist-track-number">02</span>
+                  <span class="playlist-track-title">12 AM</span>
+                  <span class="playlist-track-artist">Waiian · Prod. by Jwudz</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/waiian-si-lods-na-bahala.mp3" data-track-title="Waiian — Si Lods Na Bahala" aria-pressed="false">
+                  <span class="playlist-track-number">03</span>
+                  <span class="playlist-track-title">Si Lods Na Bahala</span>
+                  <span class="playlist-track-artist">Waiian</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/kahit-umulan.mp3" data-track-title="La Mave — Kahit Umulan (feat. Waiian)" aria-pressed="false">
+                  <span class="playlist-track-number">04</span>
+                  <span class="playlist-track-title">Kahit Umulan</span>
+                  <span class="playlist-track-artist">La Mave · Waiian</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/waiian-man-in-the-merror.mp3" data-track-title="Waiian — Man in the Merror" aria-pressed="false">
+                  <span class="playlist-track-number">05</span>
+                  <span class="playlist-track-title">Man in the Merror</span>
+                  <span class="playlist-track-artist">Waiian</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/softie.mp3" data-track-title="Softie — Waiian (feat. Nicole Anjela)" aria-pressed="false">
+                  <span class="playlist-track-number">06</span>
+                  <span class="playlist-track-title">Softie</span>
+                  <span class="playlist-track-artist">Waiian · Nicole Anjela</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/still-my-baby.mp3" data-track-title="Mr. Wao — Still My Baby (feat. Waiian)" aria-pressed="false">
+                  <span class="playlist-track-number">07</span>
+                  <span class="playlist-track-title">Still My Baby</span>
+                  <span class="playlist-track-artist">Mr. Wao · Waiian</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/waiian-pablo.mp3" data-track-title="Waiian — Pablo" aria-pressed="false">
+                  <span class="playlist-track-number">08</span>
+                  <span class="playlist-track-title">Pablo</span>
+                  <span class="playlist-track-artist">Waiian</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/waiian-asan-na-si.mp3" data-track-title="Waiian — Asan Na Si..." aria-pressed="false">
+                  <span class="playlist-track-number">09</span>
+                  <span class="playlist-track-title">Asan Na Si...</span>
+                  <span class="playlist-track-artist">Waiian</span>
+                </button>
+                <button class="playlist-track" type="button" data-track-src="audio/waiian-2rare.mp3" data-track-title="Waiian — 2RARE (feat. Rjay Ty)" aria-pressed="false">
+                  <span class="playlist-track-number">10</span>
+                  <span class="playlist-track-title">2RARE</span>
+                  <span class="playlist-track-artist">Waiian · Rjay Ty</span>
+                </button>
+              </div>
+              <div class="spotify-display-footer">
+                <button class="spotify-spotlight-toggle" id="uncleDagsToggle" type="button" aria-expanded="false" aria-controls="uncleDagsTracks">
+                  <span class="spotify-spotlight-copy"><span class="spotify-kicker">ARTIST SPOTLIGHT</span><strong>Uncle Dags</strong></span>
+                  <span class="spotify-equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+                </button>
+                <button class="spotify-spotlight-toggle spotify-spotlight-waiian" id="waiianToggle" type="button" aria-expanded="false" aria-controls="waiianTracks">
+                  <span class="spotify-spotlight-copy"><span class="spotify-kicker">ARTIST SPOTLIGHT</span><strong>Waiian</strong></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </section>
+
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>© 2026 Haykenn · Built with curiosity.</span><span class="footer-mushroom" aria-hidden="true">🍄</span></div></footer>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
